@@ -14,47 +14,50 @@
 
 <body>
 
-    <div id="app" >
-        <header>
-            <img src="./assets/logo.png" alt="magee avatar" id="logo">
-            <h1 id="website-title">Photography Album</h1>
-            <!-- <div id="search-bar">
-                <label for="type-select">
-                    <span>photo types: </span>
-                    <select v-model="type" id="type-select">
-                        <option v-for="({value,label}) of typeList" :key="value" :value="value">{{label}}</option>
-                    </select>
-                </label>
-            </div> -->
-            <i id="menu-btn" @click="switchMenu"></i>
-        </header>
-        <div id="menu" :class="menuSwitch?'act':''" @click="switchMenu">
+    <div id="app">
 
-            <ul class="menu-list">
-                <li class="menu-item" v-for="({value,label}) of typeList" @click.stop="menuItemClick(value)">
-                    <h2 class="name">{{label}}</h2>
-                    <i class="append"></i>
-                </li>
-            </ul>
-        </div>
-        <main >
-            <h2 id="title">{{typeTitle}} photos</h2>
-            <ul id="photo-list" ref="photoListEl">
-                <li v-for="(item,index) of photoList" :key="index" class="photo-item">
-                    <img :origin-src="getFullImageUrl(1,item.url)" :src="getFullImageUrl(0,item.url)" :alt="item.title"
-                        loading="lazy" @click="lookBigPhoto($event,index)">
-                    <p>{{item.title}}</p>
-                </li>
-            </ul>
-        </main>
-        <footer>
-            <p>made by ZhengdaoZhang</p>
-        </footer>
     </div>
     <script type="module">
         const { createApp, ref, computed, watch } = Vue;
         import { PHOTO_BASE_URL, TYPE_LIST, PHOTO_URL_LIST } from './js/constants.js'
         const app = createApp({
+            template: `
+            <header>
+                <img src="./assets/logo.png" alt="magee avatar" id="logo">
+                <h1 id="website-title">Photography Album</h1>
+                <!-- <div id="search-bar">
+                    <label for="type-select">
+                        <span>photo types: </span>
+                        <select v-model="type" id="type-select">
+                            <option v-for="({value,label}) of typeList" :key="value" :value="value">{{label}}</option>
+                        </select>
+                    </label>
+                </div> -->
+                <i id="menu-btn" @click="switchMenu"></i>
+            </header>
+            <div id="menu" :class="menuSwitch?'act':''" @click="switchMenu">
+
+                <ul class="menu-list">
+                    <li class="menu-item" v-for="({value,label}) of typeList" @click.stop="menuItemClick(value)">
+                        <h2 class="name">{{label}}</h2>
+                        <i class="append"></i>
+                    </li>
+                </ul>
+            </div>
+            <main >
+                <h2 id="title">{{typeTitle}} photos</h2>
+                <ul id="photo-list" ref="photoListEl">
+                    <li v-for="(item,index) of photoList" :key="index" class="photo-item">
+                        <img :origin-src="getFullImageUrl(1,item.url)" :src="getFullImageUrl(0,item.url)" :alt="item.title"
+                            loading="lazy" @click="lookBigPhoto($event,index)">
+                        <p>{{item.title}}</p>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <p>made by ZhengdaoZhang</p>
+            </footer>
+            `,
             setup() {
                 let viewer = null;
                 const menuSwitch = ref(false);
@@ -68,7 +71,7 @@
                 })
                 watch(type, (v) => {
                     document.getElementById("app").scrollTo({
-                        top:0
+                        top: 0
                     })
                     photoList.value = PHOTO_URL_LIST.filter(item => type.value === 0 ? true : type.value === item.type);
                     if (viewer) {
