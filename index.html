@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/png">
+    <title>Photography Album</title>
+    <script src="./js/vue.global.js"></script>
+    <script src="./js/viewer.min.js"></script>
+    <link rel="stylesheet" href="./css/viewer.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <header>
+            <img src="./assets/logo.png" alt="magee avatar" id="logo">
+            <h1 id="website-title">Magee's Photography Album</h1>
+            <div id="search-bar">
+                <label for="type-select">
+                    <span>photo types: </span>
+                    <select v-model="type" id="type-select">
+                        <option v-for="({value,label}) of typeList" :key="value" :value="value">{{label}}</option>
+                    </select>
+                </label>
+            </div>
+        </header>
+        <main>
+            <h2 id="title">{{typeTitle}} photos</h2>
+            <ul id="photo-list" ref="photoListEl">
+                <li v-for="(item,index) of photoList" :key="index" class="photo-item">
+                    <img :origin-src="getFullImageUrl(1,item.url)" :src="getFullImageUrl(0,item.url)" :alt="item.title"
+                        loading="lazy" @click="lookBigPhoto($event,index)">
+                    <p>{{item.title}}</p>
+                </li>
+            </ul>
+        </main>
+    </div>
+    <script type="module">
+        const { createApp, ref, computed, watch } = Vue;
+        import { PHOTO_BASE_URL, TYPE_LIST, PHOTO_URL_LIST } from './js/constants.js'
+        const app = createApp({
+            setup() {
+                let viewer = null;
+                const photoListEl = ref(null);
+                const typeList = TYPE_LIST;
+                const type = ref(0);
+                const photoList = ref([]);
+                const typeTitle = computed(() => {
+                    return typeList.find(item => item.value === type.value).label
+                })
+                watch(type, (v) => {
+                    photoList.value = PHOTO_URL_LIST.filter(item => type.value === 0 ? true : type.value === item.type);
+                    if (viewer) {
+                        viewer.update();
+                    }
+                }, {
+                    immediate: true
+                });
+                function getFullImageUrl(type, url) {
+                    return PHOTO_BASE_URL + (type === 0 ? "thumbnail/" : "full/") + url
+                }
+                function lookBigPhoto(event, photoIndex) {
+                    if (!viewer) {
+                        viewer = new Viewer(photoListEl.value, {
+                            toolbar: false,
+                            navbar: false,
+                            url(image) {
+                                return image.getAttribute("origin-src")
+                            }
+                        });
+                        viewer.show();
+                    }
+                }
+                return {
+                    photoListEl,
+                    typeList,
+                    type,
+                    typeTitle,
+                    photoList,
+                    getFullImageUrl,
+                    lookBigPhoto
+                }
+            }
+        })
+        app.mount("#app");
+    </script>
+</body>
+
+</html>
