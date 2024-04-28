@@ -67,10 +67,13 @@
                         viewer = new Viewer(photoListEl.value, {
                             toolbar: false,
                             navbar: false,
+                            transition:false,
                             url(image) {
                                 return image.getAttribute("origin-src")
                             }
                         });
+                        viewer.show();
+                    }else{
                         viewer.show();
                     }
                 }
