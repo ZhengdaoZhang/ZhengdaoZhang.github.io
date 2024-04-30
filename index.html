@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="./assets/logo.png" type="image/png">
-    <title>Photography Album</title>
+    <title>Zhang Zhengdao's Photography Album</title>
     <script src="./js/vue.global.js"></script>
     <script src="./js/viewer.min.js"></script>
     <link rel="stylesheet" href="./css/viewer.min.css">
@@ -13,26 +14,15 @@
 </head>
 
 <body>
-
-    <div id="app">
-
-    </div>
+    <div id="app"></div>
     <script type="module">
         const { createApp, ref, computed, watch } = Vue;
-        import { PHOTO_BASE_URL, TYPE_LIST, PHOTO_URL_LIST } from './js/constants.js'
+        import { PHOTO_BASE_URL, TYPE_LIST, PHOTO_LIST } from './js/constants.js'
         const app = createApp({
             template: `
             <header>
                 <img src="./assets/logo.png" alt="magee avatar" id="logo">
-                <h1 id="website-title">Photography Album</h1>
-                <!-- <div id="search-bar">
-                    <label for="type-select">
-                        <span>photo types: </span>
-                        <select v-model="type" id="type-select">
-                            <option v-for="({value,label}) of typeList" :key="value" :value="value">{{label}}</option>
-                        </select>
-                    </label>
-                </div> -->
+                <h1 id="website-title">zzd's Photography Album</h1>
                 <i id="menu-btn" @click="switchMenu"></i>
             </header>
             <div id="menu" :class="menuSwitch?'act':''" @click="switchMenu">
@@ -48,14 +38,27 @@
                 <h2 id="title">{{typeTitle}} photos</h2>
                 <ul id="photo-list" ref="photoListEl">
                     <li v-for="(item,index) of photoList" :key="index" class="photo-item">
-                        <img :origin-src="getFullImageUrl(1,item.url)" :src="getFullImageUrl(0,item.url)" :alt="item.title"
-                            loading="lazy" @click="lookBigPhoto($event,index)">
-                        <p>{{item.title}}</p>
+                        <img :origin-src="getFullImageUrl(1,item.fileName)" :src="getFullImageUrl(0,item.fileName)" :alt="item.title"
+                            loading="lazy" @click="lookBigPhoto($event,index)" class="img">
+                        <div class="info">
+                            <p class="top">
+                                
+                                <span>{{compute35mmFocalLength(item.FocalLength)}}mm</span>
+                                <span>f{{item.FNumber}}</span>
+                                <span>{{computeExposureTime(item.ExposureTime)}}s</span>
+                                <span>iso {{item.ISO}}</span>
+                            </p>
+                            <div class="bottom">
+                                <p>{{item.fileName}}</p>
+                                <p>{{item.Model}}</p>
+                                <p>{{item.LensModel}}</p>
+                            </div>
+                        <div>
                     </li>
                 </ul>
             </main>
             <footer>
-                <p>made by ZhengdaoZhang</p>
+                <p>made by Zhang Zhengdao</p>
             </footer>
             `,
             setup() {
@@ -66,14 +69,17 @@
                 const typeList = TYPE_LIST;
                 const type = ref(0);
                 const photoList = ref([]);
+
                 const typeTitle = computed(() => {
                     return typeList.find(item => item.value === type.value).label
                 })
+
                 watch(type, (v) => {
                     document.getElementById("app").scrollTo({
                         top: 0
                     })
-                    photoList.value = PHOTO_URL_LIST.filter(item => type.value === 0 ? true : type.value === item.type);
+                    photoList.value = PHOTO_LIST.filter(item => type.value === 0 ? true : type.value === item.type);
+                    // .sort((a, b) => new Date(b.CreateDate) - new Date(a.CreateDate))
                     if (viewer) {
                         viewer.update();
                     }
@@ -84,18 +90,34 @@
                 function switchMenu() {
                     menuSwitch.value = !menuSwitch.value;
                 }
+
                 function menuItemClick(typeVal) {
                     switchMenu();
                     type.value = typeVal;
                 }
-                function getFullImageUrl(type, url) {
-                    return PHOTO_BASE_URL + (type === 0 ? "thumbnail/" : "full/") + url
+
+                function getFullImageUrl(type, fileName) {
+                    return PHOTO_BASE_URL + (type === 0 ? "thumbnail/" : "full/") + fileName
                 }
+
+                function computeExposureTime(exposureTime) {
+                    if (exposureTime >= 1) {
+                        return exposureTime
+                    }
+                    return '1/' + (parseFloat(1 / exposureTime) % 1 > 0 ? parseFloat((1 / exposureTime).toFixed(1)) : parseFloat(1 / exposureTime))
+                }
+                function compute35mmFocalLength(focalLength) {
+                    let res = focalLength * 1.5;
+                    return res & 1 > 0 ? res.toFixed(1) : res
+                }
+
                 function lookBigPhoto(event, photoIndex) {
                     if (!viewer) {
                         viewer = new Viewer(photoListEl.value, {
-                            toolbar: false,
                             navbar: false,
+                            slideOnTouch: false,
+                            toolbar: false,
+                            keyboard: false,
                             url(image) {
                                 return image.getAttribute("origin-src")
                             }
@@ -105,6 +127,7 @@
                         viewer.show();
                     }
                 }
+
                 return {
                     menuSwitch,
                     photoListEl,
@@ -115,6 +138,8 @@
                     photoList,
                     switchMenu,
                     menuItemClick,
+                    compute35mmFocalLength,
+                    computeExposureTime,
                     getFullImageUrl,
                     lookBigPhoto
                 }
