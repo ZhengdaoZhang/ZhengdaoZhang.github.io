@@ -38,7 +38,7 @@
                 <h2 id="title">{{typeTitle}} photos</h2>
                 <ul id="photo-list" ref="photoListEl">
                     <li v-for="(item,index) of photoList" :key="index" class="photo-item">
-                        <img :origin-src="getFullImageUrl(1,item.fileName)" :src="getFullImageUrl(0,item.fileName)" :alt="item.title"
+                        <img  :src="getFullImageUrl(item.fileName)" :alt="item.title"
                             loading="lazy" @click="lookBigPhoto($event,index)" class="img">
                         <div class="info">
                             <p class="top">
@@ -57,7 +57,7 @@
                 </ul>
             </main>
             <footer>
-                <p>made by Zhang Zhengdao</p>
+                <p>For original images please contact:<br/>zzd1645@gmail.com<p>
             </footer>
             `,
             setup() {
@@ -94,8 +94,8 @@
                     type.value = typeVal;
                 }
 
-                function getFullImageUrl(type, fileName) {
-                    return PHOTO_BASE_URL + (type === 0 ? "thumbnail/" : "full/") + fileName
+                function getFullImageUrl(fileName) {
+                    return PHOTO_BASE_URL + "thumbnail/" + fileName
                 }
 
                 function computeExposureTime(exposureTime) {
@@ -116,9 +116,9 @@
                             slideOnTouch: false,
                             toolbar: false,
                             keyboard: false,
-                            url(image) {
-                                return image.getAttribute("origin-src")
-                            }
+                            title:[1,()=>{
+                                return "For original images please contact: zzd1645@gmail.com"
+                            }]
                         });
                         viewer.show();
                     } else {
