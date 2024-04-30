@@ -37,7 +37,7 @@
             <main >
                 <h2 id="title">{{typeTitle}} photos</h2>
                 <ul id="photo-list" ref="photoListEl">
-                    <li v-for="(item,index) of photoList" :key="index" class="photo-item">
+                    <li v-for="(item,index) of photoList" :key="item.fileName" class="photo-item">
                         <img  :src="getFullImageUrl(item.fileName)" :alt="item.title"
                             loading="lazy" @click="lookBigPhoto($event,index)" class="img">
                         <div class="info">
