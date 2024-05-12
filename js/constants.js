@@ -26,7 +26,7 @@ export const TYPE_LIST = [
     },
 ];
 
-export const PHOTO_LIST = [
+const PHOTO_LIST_0 = [
     {
         "fileName": "DSC_0083.jpg",
         "Make": "NIKON CORPORATION",
@@ -1072,30 +1072,6 @@ export const PHOTO_LIST = [
         "type": -1
     },
     {
-        "fileName": "DSC_2453.jpg",
-        "Make": "NIKON CORPORATION",
-        "Model": "NIKON Z 30",
-        "FocalLength": 28,
-        "ExposureTime": 0.00125,
-        "FNumber": 14,
-        "ISO": 100,
-        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
-        "CreateDate": "2024/04/14 11:59:38",
-        "type": 1
-    },
-    {
-        "fileName": "DSC_2456.jpg",
-        "Make": "NIKON CORPORATION",
-        "Model": "NIKON Z 30",
-        "FocalLength": 12,
-        "ExposureTime": 0.0008,
-        "FNumber": 11,
-        "ISO": 100,
-        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
-        "CreateDate": "2024/04/14 12:00:09",
-        "type": 1
-    },
-    {
         "fileName": "DSC_2459.jpg",
         "Make": "NIKON CORPORATION",
         "Model": "NIKON Z 30",
@@ -1204,18 +1180,6 @@ export const PHOTO_LIST = [
         "type": 1
     },
     {
-        "fileName": "DSC_2538.jpg",
-        "Make": "NIKON CORPORATION",
-        "Model": "NIKON Z 30",
-        "FocalLength": 28,
-        "ExposureTime": 0.0015625,
-        "FNumber": 13,
-        "ISO": 100,
-        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
-        "CreateDate": "2024/04/21 16:53:47",
-        "type": 1
-    },
-    {
         "fileName": "DSC_2550.jpg",
         "Make": "NIKON CORPORATION",
         "Model": "NIKON Z 30",
@@ -1226,18 +1190,6 @@ export const PHOTO_LIST = [
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 17:07:15",
         "type": 1
-    },
-    {
-        "fileName": "DSC_2559.jpg",
-        "Make": "NIKON CORPORATION",
-        "Model": "NIKON Z 30",
-        "FocalLength": 28,
-        "ExposureTime": 0.004,
-        "FNumber": 8,
-        "ISO": 100,
-        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
-        "CreateDate": "2024/04/21 17:11:53",
-        "type": 4
     },
     {
         "fileName": "DSC_2590.jpg",
@@ -1491,4 +1443,321 @@ export const PHOTO_LIST = [
         "CreateDate": "2024/04/27 21:59:16",
         "type": 3
     }
-]
+];
+
+const PHOTO_LIST_1 = [
+    {
+        "fileName": "DSC_2833.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.0025,
+        "FNumber": 10,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 10:36:22",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2837.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.004,
+        "FNumber": 8,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 10:37:34",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2847.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.008,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 10:40:23",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2860.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.003125,
+        "FNumber": 9,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 11:08:02",
+        "type": 1
+    },
+    {
+        "fileName": "DSC_2868.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 27.5,
+        "ExposureTime": 0.004,
+        "FNumber": 11,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 11:20:19",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2874.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 25.5,
+        "ExposureTime": 0.005,
+        "FNumber": 11,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 11:23:12",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2886.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 12,
+        "ExposureTime": 0.02,
+        "FNumber": 3.5,
+        "ISO": 1000,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 20:36:00",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_2917.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 12,
+        "ExposureTime": 0.3333333333333333,
+        "FNumber": 3.5,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 21:14:22",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_2937.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.25,
+        "FNumber": 5.6,
+        "ISO": 640,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 21:39:51",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_2939.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 12,
+        "ExposureTime": 0.016666666666666666,
+        "FNumber": 4,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 21:41:33",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_2952.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.1,
+        "FNumber": 5.6,
+        "ISO": 1000,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 21:49:06",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_2955.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.00625,
+        "FNumber": 6.3,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/01 21:51:06",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_2974.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 27.5,
+        "ExposureTime": 0.03333333333333333,
+        "FNumber": 5.6,
+        "ISO": 2000,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 11:36:08",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_2975.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 27,
+        "ExposureTime": 0.03333333333333333,
+        "FNumber": 5.6,
+        "ISO": 1000,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 11:36:27",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_3027.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.02,
+        "FNumber": 5.6,
+        "ISO": 640,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 15:27:14",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_3028.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 12,
+        "ExposureTime": 0.0125,
+        "FNumber": 4.5,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 15:28:06",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_3034.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 22,
+        "ExposureTime": 0.02,
+        "FNumber": 5,
+        "ISO": 560,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 15:35:29",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_3037.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.0125,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 15:40:00",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_3043.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.02,
+        "FNumber": 5.6,
+        "ISO": 1400,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 16:02:00",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_3046.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.008,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/03 16:04:42",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_3090.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 26,
+        "ExposureTime": 0.01,
+        "FNumber": 5.3,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/04 16:24:11",
+        "type": 3
+    },
+    {
+        "fileName": "DSC_3128.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.025,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/05 15:14:19",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_3146.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 13,
+        "ExposureTime": 0.03333333333333333,
+        "FNumber": 11,
+        "ISO": 110,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/05 16:17:05",
+        "type": 1
+    },
+    {
+        "fileName": "DSC_3159.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.008,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/05 16:57:51",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_3161.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.008,
+        "FNumber": 5.6,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/05 16:58:44",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_3162.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.00625,
+        "FNumber": 6.3,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/05 16:59:01",
+        "type": 2
+    }
+];
+
+export const PHOTO_LIST = [...PHOTO_LIST_0, ...PHOTO_LIST_1]

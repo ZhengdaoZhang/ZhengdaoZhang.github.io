@@ -3,7 +3,7 @@ const Exif = require("exif");
 const { exec } = require('child_process')
 
 // 指定文件夹路径
-const folderPath = './assets/photos/full';
+const folderPath = './1';
 
 // 读取文件夹下的所有文件名
 fs.readdir(folderPath, async (err, fileNames) => {
