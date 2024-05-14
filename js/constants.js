@@ -1757,6 +1757,30 @@ const PHOTO_LIST_1 = [
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 16:59:01",
         "type": 2
+    },
+    {
+        "fileName": "DSC_3207.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.003125,
+        "FNumber": 8,
+        "ISO": 125,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/14 08:11:31",
+        "type": 2
+    },
+    {
+        "fileName": "DSC_3210.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 28,
+        "ExposureTime": 0.001,
+        "FNumber": 8,
+        "ISO": 180,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/05/14 12:34:26",
+        "type": 2
     }
 ];
 
