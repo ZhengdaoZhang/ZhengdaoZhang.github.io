@@ -2095,7 +2095,32 @@ const PHOTO_LIST_2 = [
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:54:56",
         "type": 4
+    },
+    {
+        "fileName": "DSC_4133.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 125,
+        "ExposureTime": 0.04,
+        "FNumber": 5.3,
+        "ISO": 800,
+        "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
+        "CreateDate": "2024/06/10 20:39:55",
+        "type": -1
+    },
+    {
+        "fileName": "DSC_4134.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 250,
+        "ExposureTime": 0.005,
+        "FNumber": 6.3,
+        "ISO": 800,
+        "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
+        "CreateDate": "2024/06/10 21:17:19",
+        "type": -1
     }
+
 ]
 
 export const PHOTO_LIST = [...PHOTO_LIST_0, ...PHOTO_LIST_1, ...PHOTO_LIST_2]
