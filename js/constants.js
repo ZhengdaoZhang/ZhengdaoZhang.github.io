@@ -1,32 +1,6 @@
 export const PHOTO_BASE_URL = "/assets/photos/";
-export const TYPE_LIST = [
-    {
-        label: "all",
-        value: 0
-    },
-    {
-        label: "landscape",
-        value: 1
-    },
-    {
-        label: "plant",
-        value: 2
-    },
-    {
-        label: "building",
-        value: 3
-    },
-    {
-        label: "animal",
-        value: 4
-    },
-    {
-        label: "other",
-        value: -1
-    },
-];
 
-const PHOTO_LIST_0 = [
+export const PHOTO_LIST = [
     {
         "fileName": "DSC_0083.jpg",
         "Make": "NIKON CORPORATION",
@@ -37,7 +11,8 @@ const PHOTO_LIST_0 = [
         "ISO": 1600,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/16 18:10:30",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0087.jpg",
@@ -49,7 +24,8 @@ const PHOTO_LIST_0 = [
         "ISO": 400,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/16 18:29:09",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0244.jpg",
@@ -61,7 +37,8 @@ const PHOTO_LIST_0 = [
         "ISO": 125,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/17 15:40:08",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0252.jpg",
@@ -73,7 +50,8 @@ const PHOTO_LIST_0 = [
         "ISO": 280,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/17 15:44:46",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0327.jpg",
@@ -85,7 +63,8 @@ const PHOTO_LIST_0 = [
         "ISO": 12800,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/17 21:02:34",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0653.jpg",
@@ -97,7 +76,8 @@ const PHOTO_LIST_0 = [
         "ISO": 250,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/23 21:32:39",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0726.jpg",
@@ -109,7 +89,8 @@ const PHOTO_LIST_0 = [
         "ISO": 360,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/23 22:02:42",
-        "type": 3
+        "ExifImageWidth": 703,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0731-2.jpg",
@@ -121,7 +102,8 @@ const PHOTO_LIST_0 = [
         "ISO": 250,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/23 22:05:28",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0740.jpg",
@@ -133,7 +115,8 @@ const PHOTO_LIST_0 = [
         "ISO": 180,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/23 22:08:53",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0853.jpg",
@@ -145,7 +128,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 13:51:22",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0872.jpg",
@@ -157,7 +141,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 16:55:38",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0913.jpg",
@@ -169,7 +154,8 @@ const PHOTO_LIST_0 = [
         "ISO": 3600,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 18:41:30",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0943.jpg",
@@ -181,7 +167,8 @@ const PHOTO_LIST_0 = [
         "ISO": 7200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 18:57:18",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0982.jpg",
@@ -193,7 +180,8 @@ const PHOTO_LIST_0 = [
         "ISO": 11400,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 19:10:08",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_0985.jpg",
@@ -205,7 +193,8 @@ const PHOTO_LIST_0 = [
         "ISO": 51200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 19:11:25",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1038.jpg",
@@ -217,7 +206,8 @@ const PHOTO_LIST_0 = [
         "ISO": 1400,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 20:10:40",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1098.jpg",
@@ -229,7 +219,8 @@ const PHOTO_LIST_0 = [
         "ISO": 450,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 21:10:49",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1107.jpg",
@@ -241,7 +232,8 @@ const PHOTO_LIST_0 = [
         "ISO": 1100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 21:15:56",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1110-2.jpg",
@@ -253,7 +245,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/24 21:20:16",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1117.jpg",
@@ -265,7 +258,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 11:28:10",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1124.jpg",
@@ -277,7 +271,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 11:29:38",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1131.jpg",
@@ -289,7 +284,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 11:32:23",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1145.jpg",
@@ -301,7 +297,21 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:11:12",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
+    },
+    {
+        "fileName": "DSC_1148.jpg",
+        "Make": "NIKON CORPORATION",
+        "Model": "NIKON Z 30",
+        "FocalLength": 12,
+        "ExposureTime": 0.002,
+        "FNumber": 11,
+        "ISO": 100,
+        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
+        "CreateDate": "2024/02/25 12:13:24",
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1177.jpg",
@@ -313,7 +323,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:34:20",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1178.jpg",
@@ -325,7 +336,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:36:53",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1191.jpg",
@@ -337,7 +349,8 @@ const PHOTO_LIST_0 = [
         "ISO": 560,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:50:51",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1192.jpg",
@@ -349,7 +362,8 @@ const PHOTO_LIST_0 = [
         "ISO": 3200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:51:20",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1198.jpg",
@@ -361,7 +375,8 @@ const PHOTO_LIST_0 = [
         "ISO": 160,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:55:55",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1202.jpg",
@@ -373,7 +388,8 @@ const PHOTO_LIST_0 = [
         "ISO": 900,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:56:59",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1203.jpg",
@@ -385,7 +401,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/25 12:57:35",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1214.jpg",
@@ -397,7 +414,8 @@ const PHOTO_LIST_0 = [
         "ISO": 3600,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/26 18:41:29",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1234.jpg",
@@ -409,7 +427,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/29 10:34:10",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1239.jpg",
@@ -421,7 +440,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/29 10:40:31",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1261.jpg",
@@ -433,7 +453,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/29 10:59:45",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1273.jpg",
@@ -445,7 +466,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/02/29 11:05:20",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1313.jpg",
@@ -457,7 +479,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 11:33:46",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1327.jpg",
@@ -469,7 +492,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 11:54:40",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1330.jpg",
@@ -481,7 +505,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:06:33",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1332.jpg",
@@ -493,7 +518,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:07:05",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1334.jpg",
@@ -505,7 +531,8 @@ const PHOTO_LIST_0 = [
         "ISO": 140,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:07:44",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1338.jpg",
@@ -517,7 +544,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:08:24",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1343.jpg",
@@ -529,7 +557,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:09:39",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1345.jpg",
@@ -541,7 +570,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:09:49",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1347.jpg",
@@ -553,7 +583,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:10:32",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1348.jpg",
@@ -565,7 +596,8 @@ const PHOTO_LIST_0 = [
         "ISO": 110,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 12:10:54",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1390.jpg",
@@ -577,7 +609,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/03 15:49:14",
-        "type": 4
+        "ExifImageWidth": 1700,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1512.jpg",
@@ -589,7 +622,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:02:03",
-        "type": 3
+        "ExifImageWidth": 714,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1526.jpg",
@@ -601,7 +635,8 @@ const PHOTO_LIST_0 = [
         "ISO": 250,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:08:28",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1573.jpg",
@@ -613,7 +648,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:28:56",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1578.jpg",
@@ -625,7 +661,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:31:21",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1583.jpg",
@@ -637,7 +674,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:32:48",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1586.jpg",
@@ -649,7 +687,8 @@ const PHOTO_LIST_0 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:34:13",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1592.jpg",
@@ -661,7 +700,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:37:15",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1599.jpg",
@@ -673,7 +713,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:41:15",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1612.jpg",
@@ -685,7 +726,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:47:11",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1613.jpg",
@@ -697,7 +739,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:47:43",
-        "type": -1
+        "ExifImageWidth": 707,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1619.jpg",
@@ -709,7 +752,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:51:50",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1625.jpg",
@@ -721,7 +765,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:54:48",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1627.jpg",
@@ -733,7 +778,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 11:55:09",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1640.jpg",
@@ -745,7 +791,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 12:01:31",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1642.jpg",
@@ -757,7 +804,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/10 12:03:38",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1652.jpg",
@@ -769,7 +817,8 @@ const PHOTO_LIST_0 = [
         "ISO": 16000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/21 20:46:56",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1658.jpg",
@@ -781,7 +830,8 @@ const PHOTO_LIST_0 = [
         "ISO": 7200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/21 20:50:53",
-        "type": 3
+        "ExifImageWidth": 1682,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1659.jpg",
@@ -793,7 +843,8 @@ const PHOTO_LIST_0 = [
         "ISO": 4000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/21 20:51:42",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1662.jpg",
@@ -805,7 +856,8 @@ const PHOTO_LIST_0 = [
         "ISO": 1600,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/21 20:52:58",
-        "type": 3
+        "ExifImageWidth": 1836,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1666.jpg",
@@ -817,7 +869,8 @@ const PHOTO_LIST_0 = [
         "ISO": 4000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/21 20:54:51",
-        "type": 3
+        "ExifImageWidth": 1601,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1702.jpg",
@@ -829,7 +882,8 @@ const PHOTO_LIST_0 = [
         "ISO": 500,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/24 10:34:46",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1725.jpg",
@@ -841,7 +895,8 @@ const PHOTO_LIST_0 = [
         "ISO": 8000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/24 11:03:35",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1754.jpg",
@@ -853,7 +908,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/24 12:06:01",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1765.jpg",
@@ -865,7 +921,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/24 12:25:48",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1770.jpg",
@@ -877,7 +934,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/24 12:29:52",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1780.jpg",
@@ -889,7 +947,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 16:32:01",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1789.jpg",
@@ -901,7 +960,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 16:39:40",
-        "type": 2
+        "ExifImageWidth": 1648,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1810.jpg",
@@ -913,7 +973,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 17:16:27",
-        "type": -1
+        "ExifImageWidth": 1590,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_1812.jpg",
@@ -925,7 +986,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 17:17:54",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2049.jpg",
@@ -937,7 +999,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 18:12:50",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2075.jpg",
@@ -949,7 +1012,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/03/30 18:34:46",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2109.jpg",
@@ -961,7 +1025,8 @@ const PHOTO_LIST_0 = [
         "ISO": 200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/06 13:45:24",
-        "type": -1
+        "ExifImageWidth": 1654,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2115.jpg",
@@ -973,7 +1038,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/06 14:20:04",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2169.jpg",
@@ -985,7 +1051,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/06 17:48:33",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2179.jpg",
@@ -997,7 +1064,8 @@ const PHOTO_LIST_0 = [
         "ISO": 110,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/06 18:31:04",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2215.jpg",
@@ -1009,7 +1077,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/11 12:22:33",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2267.jpg",
@@ -1021,7 +1090,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/11 18:09:48",
-        "type": 2
+        "ExifImageWidth": 1532,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2271.jpg",
@@ -1033,7 +1103,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/11 18:11:42",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2280.jpg",
@@ -1045,7 +1116,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/11 18:15:16",
-        "type": 2
+        "ExifImageWidth": 736,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2398.jpg",
@@ -1057,7 +1129,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/14 11:05:27",
-        "type": -1
+        "ExifImageWidth": 721,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2409.jpg",
@@ -1069,7 +1142,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/14 11:15:32",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2459.jpg",
@@ -1081,7 +1155,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/14 12:00:49",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2467.jpg",
@@ -1093,7 +1168,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/14 12:07:15",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2480.jpg",
@@ -1105,7 +1181,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 10:58:31",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2492.jpg",
@@ -1117,7 +1194,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 15:42:38",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2498.jpg",
@@ -1129,7 +1207,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 15:49:00",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2501.jpg",
@@ -1141,7 +1220,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 16:08:26",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2515.jpg",
@@ -1153,7 +1233,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 16:23:17",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2516.jpg",
@@ -1165,7 +1246,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 16:25:01",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2536.jpg",
@@ -1177,7 +1259,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 16:52:46",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2550.jpg",
@@ -1189,7 +1272,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 17:07:15",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2590.jpg",
@@ -1201,7 +1285,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/21 18:35:45",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2620.jpg",
@@ -1213,7 +1298,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:25:13",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2628.jpg",
@@ -1225,7 +1311,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:36:12",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2640.jpg",
@@ -1237,7 +1324,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:42:46",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2652.jpg",
@@ -1249,7 +1337,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:49:06",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2665.jpg",
@@ -1261,7 +1350,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:57:15",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2669.jpg",
@@ -1273,7 +1363,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/23 12:59:56",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2707.jpg",
@@ -1285,19 +1376,8 @@ const PHOTO_LIST_0 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 10:05:05",
-        "type": -1
-    },
-    {
-        "fileName": "DSC_2709.jpg",
-        "Make": "NIKON CORPORATION",
-        "Model": "NIKON Z 30",
-        "FocalLength": 28,
-        "ExposureTime": 0.002,
-        "FNumber": 11,
-        "ISO": 640,
-        "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
-        "CreateDate": "2024/04/27 10:31:55",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2710.jpg",
@@ -1309,7 +1389,8 @@ const PHOTO_LIST_0 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 10:32:07",
-        "type": 4
+        "ExifImageWidth": 1603,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2731.jpg",
@@ -1321,7 +1402,8 @@ const PHOTO_LIST_0 = [
         "ISO": 500,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 10:53:24",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2745.jpg",
@@ -1333,7 +1415,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:05:34",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2751.jpg",
@@ -1345,7 +1428,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:34:48",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2759.jpg",
@@ -1357,7 +1441,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:43:42",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2763.jpg",
@@ -1369,7 +1454,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:44:37",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2765.jpg",
@@ -1381,7 +1467,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:45:12",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2766.jpg",
@@ -1393,7 +1480,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:45:45",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2768.jpg",
@@ -1405,7 +1493,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:46:12",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2769.jpg",
@@ -1417,7 +1506,8 @@ const PHOTO_LIST_0 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 11:46:33",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2792.jpg",
@@ -1429,7 +1519,8 @@ const PHOTO_LIST_0 = [
         "ISO": 160,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 21:33:45",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2809.jpg",
@@ -1441,11 +1532,9 @@ const PHOTO_LIST_0 = [
         "ISO": 160,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/04/27 21:59:16",
-        "type": 3
-    }
-];
-
-const PHOTO_LIST_1 = [
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
+    },
     {
         "fileName": "DSC_2833.jpg",
         "Make": "NIKON CORPORATION",
@@ -1456,7 +1545,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 10:36:22",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2837.jpg",
@@ -1468,7 +1558,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 10:37:34",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2847.jpg",
@@ -1480,7 +1571,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 10:40:23",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2860.jpg",
@@ -1492,7 +1584,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 11:08:02",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2868.jpg",
@@ -1504,7 +1597,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 11:20:19",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2874.jpg",
@@ -1516,7 +1610,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 11:23:12",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2886.jpg",
@@ -1528,7 +1623,8 @@ const PHOTO_LIST_1 = [
         "ISO": 1000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 20:36:00",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2917.jpg",
@@ -1540,7 +1636,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 21:14:22",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2937.jpg",
@@ -1552,7 +1649,8 @@ const PHOTO_LIST_1 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 21:39:51",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2939.jpg",
@@ -1564,7 +1662,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 21:41:33",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2952.jpg",
@@ -1576,7 +1675,8 @@ const PHOTO_LIST_1 = [
         "ISO": 1000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 21:49:06",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2955.jpg",
@@ -1588,7 +1688,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/01 21:51:06",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2974.jpg",
@@ -1600,7 +1701,8 @@ const PHOTO_LIST_1 = [
         "ISO": 2000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 11:36:08",
-        "type": 2
+        "ExifImageWidth": 1626,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_2975.jpg",
@@ -1612,7 +1714,8 @@ const PHOTO_LIST_1 = [
         "ISO": 1000,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 11:36:27",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3027.jpg",
@@ -1624,7 +1727,8 @@ const PHOTO_LIST_1 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 15:27:14",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3028.jpg",
@@ -1636,7 +1740,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 15:28:06",
-        "type": -1
+        "ExifImageWidth": 1920,
+        "ExifImageHeight": 1061
     },
     {
         "fileName": "DSC_3034.jpg",
@@ -1648,7 +1753,8 @@ const PHOTO_LIST_1 = [
         "ISO": 560,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 15:35:29",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3037.jpg",
@@ -1660,7 +1766,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 15:40:00",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3043.jpg",
@@ -1672,7 +1779,8 @@ const PHOTO_LIST_1 = [
         "ISO": 1400,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 16:02:00",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3046.jpg",
@@ -1684,7 +1792,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/03 16:04:42",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3090.jpg",
@@ -1696,7 +1805,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/04 16:24:11",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3128.jpg",
@@ -1708,7 +1818,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 15:14:19",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3146.jpg",
@@ -1720,7 +1831,8 @@ const PHOTO_LIST_1 = [
         "ISO": 110,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 16:17:05",
-        "type": 1
+        "ExifImageWidth": 1920,
+        "ExifImageHeight": 1057
     },
     {
         "fileName": "DSC_3159.jpg",
@@ -1732,7 +1844,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 16:57:51",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3161.jpg",
@@ -1744,7 +1857,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 16:58:44",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3162.jpg",
@@ -1756,7 +1870,8 @@ const PHOTO_LIST_1 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/05 16:59:01",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3207.jpg",
@@ -1768,7 +1883,8 @@ const PHOTO_LIST_1 = [
         "ISO": 125,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/14 08:11:31",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3210.jpg",
@@ -1780,10 +1896,9 @@ const PHOTO_LIST_1 = [
         "ISO": 180,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/05/14 12:34:26",
-        "type": 2
-    }
-];
-const PHOTO_LIST_2 = [
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
+    },
     {
         "fileName": "DSC_3355.jpg",
         "Make": "NIKON CORPORATION",
@@ -1794,7 +1909,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/23 21:18:19",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3378.jpg",
@@ -1806,7 +1922,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/24 12:31:53",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3400.jpg",
@@ -1818,7 +1935,8 @@ const PHOTO_LIST_2 = [
         "ISO": 220,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/24 18:36:01",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3424.jpg",
@@ -1830,7 +1948,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 14:14:21",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3449.jpg",
@@ -1842,7 +1961,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 16:18:00",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3452.jpg",
@@ -1854,7 +1974,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 16:20:07",
-        "type": 0
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3463.jpg",
@@ -1866,7 +1987,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 16:25:41",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3465.jpg",
@@ -1878,7 +2000,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 16:28:59",
-        "type": 2
+        "ExifImageWidth": 782,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3470.jpg",
@@ -1890,7 +2013,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 16:33:50",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3520.jpg",
@@ -1902,7 +2026,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 18:31:35",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3536.jpg",
@@ -1914,7 +2039,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 18:47:54",
-        "type": 2
+        "ExifImageWidth": 822,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3559.jpg",
@@ -1926,7 +2052,8 @@ const PHOTO_LIST_2 = [
         "ISO": 3600,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/05/27 20:11:38",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3602.jpg",
@@ -1938,7 +2065,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/02 17:09:19",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3639.jpg",
@@ -1950,7 +2078,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/02 17:29:49",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3642.jpg",
@@ -1962,7 +2091,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/02 17:30:53",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3755.jpg",
@@ -1974,7 +2104,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 10:18:24",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3850.jpg",
@@ -1986,7 +2117,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 10:45:23",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3880.jpg",
@@ -1998,7 +2130,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 11:38:12",
-        "type": 2
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3883.jpg",
@@ -2010,7 +2143,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 11:40:54",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3888.jpg",
@@ -2022,7 +2156,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 11:43:23",
-        "type": 0
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3902.jpg",
@@ -2034,7 +2169,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 11:47:47",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_3980.jpg",
@@ -2046,7 +2182,8 @@ const PHOTO_LIST_2 = [
         "ISO": 1000,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:16:36",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4018.jpg",
@@ -2058,7 +2195,8 @@ const PHOTO_LIST_2 = [
         "ISO": 220,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:25:44",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4021.jpg",
@@ -2070,7 +2208,8 @@ const PHOTO_LIST_2 = [
         "ISO": 200,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:26:09",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4066.jpg",
@@ -2082,7 +2221,8 @@ const PHOTO_LIST_2 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:32:30",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4110.jpg",
@@ -2094,7 +2234,8 @@ const PHOTO_LIST_2 = [
         "ISO": 180,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/08 15:54:56",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4133.jpg",
@@ -2106,7 +2247,8 @@ const PHOTO_LIST_2 = [
         "ISO": 800,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/10 20:39:55",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4134.jpg",
@@ -2118,12 +2260,9 @@ const PHOTO_LIST_2 = [
         "ISO": 800,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/10 21:17:19",
-        "type": -1
-    }
-
-]
-
-const PHOTO_LIST_3 = [
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
+    },
     {
         "fileName": "DSC_4216.jpg",
         "Make": "NIKON CORPORATION",
@@ -2134,7 +2273,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/06/29 14:17:22",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4309.jpg",
@@ -2146,7 +2286,8 @@ const PHOTO_LIST_3 = [
         "ISO": 200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/06/30 18:08:23",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4450.jpg",
@@ -2158,7 +2299,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/14 21:20:39",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4477.jpg",
@@ -2170,7 +2312,8 @@ const PHOTO_LIST_3 = [
         "ISO": 160,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/21 17:21:02",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4530.jpg",
@@ -2182,7 +2325,8 @@ const PHOTO_LIST_3 = [
         "ISO": 140,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/21 18:00:58",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4552.jpg",
@@ -2194,7 +2338,8 @@ const PHOTO_LIST_3 = [
         "ISO": 720,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/21 18:23:39",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_4580.jpg",
@@ -2206,7 +2351,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/22 18:43:35",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5004.jpg",
@@ -2218,7 +2364,8 @@ const PHOTO_LIST_3 = [
         "ISO": 2800,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/07/28 13:48:11",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5008.jpg",
@@ -2230,7 +2377,8 @@ const PHOTO_LIST_3 = [
         "ISO": 1250,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/07/28 13:56:54",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5014.jpg",
@@ -2242,7 +2390,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/07/28 14:13:43",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5018.jpg",
@@ -2254,7 +2403,8 @@ const PHOTO_LIST_3 = [
         "ISO": 3200,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/07/28 14:23:12",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5029.jpg",
@@ -2266,7 +2416,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/07/28 15:51:45",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5123.jpg",
@@ -2278,7 +2429,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 08:55:42",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5128.jpg",
@@ -2290,7 +2442,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 09:00:34",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5150.jpg",
@@ -2302,7 +2455,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 09:11:08",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5159.jpg",
@@ -2314,7 +2468,8 @@ const PHOTO_LIST_3 = [
         "ISO": 200,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 09:23:44",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5196.jpg",
@@ -2326,7 +2481,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 09:58:52",
-        "type": 4
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5231.jpg",
@@ -2338,7 +2494,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 10:54:07",
-        "type": 4
+        "ExifImageWidth": 1619,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5252.jpg",
@@ -2350,7 +2507,8 @@ const PHOTO_LIST_3 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 11:17:21",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5266.jpg",
@@ -2362,7 +2520,8 @@ const PHOTO_LIST_3 = [
         "ISO": 640,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 12:58:29",
-        "type": 4
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_5299.jpg",
@@ -2374,11 +2533,9 @@ const PHOTO_LIST_3 = [
         "ISO": 110,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/07/30 13:43:27",
-        "type": 4
-    }
-]
-
-const PHOTO_LIST_4 = [
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
+    },
     {
         "fileName": "DSC_5925.jpg",
         "Make": "NIKON CORPORATION",
@@ -2389,7 +2546,8 @@ const PHOTO_LIST_4 = [
         "ISO": 4000,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/04 20:57:39",
-        "type": 3
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6146.jpg",
@@ -2401,7 +2559,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/09 19:32:37",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6288.jpg",
@@ -2413,7 +2572,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/08/11 15:37:01",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6437.jpg",
@@ -2425,7 +2585,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR",
         "CreateDate": "2024/08/11 16:44:25",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6524.jpg",
@@ -2437,7 +2598,8 @@ const PHOTO_LIST_4 = [
         "ISO": 640,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/11 17:23:53",
-        "type": -1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6532.jpg",
@@ -2449,7 +2611,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/11 17:28:24",
-        "type": 1
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6589.jpg",
@@ -2461,7 +2624,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/11 18:25:40",
-        "type": 2
+        "ExifImageWidth": 720,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6662.jpg",
@@ -2473,7 +2637,8 @@ const PHOTO_LIST_4 = [
         "ISO": 800,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/11 23:10:17",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6679.jpg",
@@ -2485,7 +2650,8 @@ const PHOTO_LIST_4 = [
         "ISO": 1000,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/12 04:20:46",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6690.jpg",
@@ -2497,7 +2663,8 @@ const PHOTO_LIST_4 = [
         "ISO": 640,
         "LensModel": "MEKE 33mmF1.4Z",
         "CreateDate": "2024/08/12 04:43:09",
-        "type": -1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6776.jpg",
@@ -2509,7 +2676,8 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/08/12 05:54:33",
-        "type": 1
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     },
     {
         "fileName": "DSC_6808.jpg",
@@ -2521,8 +2689,7 @@ const PHOTO_LIST_4 = [
         "ISO": 100,
         "LensModel": "NIKKOR Z DX 50-250mm f/4.5-6.3 VR",
         "CreateDate": "2024/08/12 06:06:23",
-        "type": 3
+        "ExifImageWidth": 1620,
+        "ExifImageHeight": 1080
     }
 ]
-
-export const PHOTO_LIST = [...PHOTO_LIST_0, ...PHOTO_LIST_1, ...PHOTO_LIST_2, ...PHOTO_LIST_3, ...PHOTO_LIST_4]

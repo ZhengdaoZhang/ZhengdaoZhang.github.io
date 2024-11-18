@@ -11,86 +11,46 @@
     <script src="./js/viewer.min.js"></script>
     <link rel="stylesheet" href="./css/viewer.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 <body>
     <div id="app"></div>
     <script type="module">
+        import { loadImage } from './js/utils.js';
         const { createApp, ref, computed, watch } = Vue;
-        import { PHOTO_BASE_URL, TYPE_LIST, PHOTO_LIST } from './js/constants.js'
+        import { PHOTO_BASE_URL, PHOTO_LIST } from './js/constants.js'
         const app = createApp({
             template: `
             <header>
                 <img src="./assets/logo.png" alt="magee avatar" id="logo">
                 <h1 id="website-title">zzd's Photography Album</h1>
-                <i id="menu-btn" @click="switchMenu"></i>
             </header>
-            <div id="menu" :class="menuSwitch?'act':''" @click="switchMenu">
-                <ul class="menu-list">
-                    <li class="menu-item" v-for="({value,label}) of typeList" @click.stop="menuItemClick(value)">
-                        <h2 class="name">{{label}}</h2>
-                        <i class="append"></i>
-                    </li>
-                </ul>
-            </div>
-            <main >
-                <h2 id="title">{{typeTitle}} photos</h2>
+            <main>
+                <canvas id="canvas" ref="photoEl"></canvas>
                 <ul id="photo-list" >
-                    <li v-for="(item,index) of photoList" :key="item.fileName" class="photo-item" @click.capture="lookBigPhoto($event)">
-                        <img  :src="getFullImageUrl(item.fileName)" :alt="item.title"
-                            loading="lazy" class="img">
-                        <div class="info">
-                            <p class="top">
-                                
-                                <span>{{compute35mmFocalLength(item.FocalLength)}}mm</span>
-                                <span>f{{item.FNumber}}</span>
-                                <span>{{computeExposureTime(item.ExposureTime)}}s</span>
-                                <span>iso {{item.ISO}}</span>
-                            </p>
-                            <div class="bottom">
-                                <p>{{item.Model}}</p>
-                                <p>{{item.LensModel}}</p>
-                            </div>
-                        <div>
+                    <li v-for="(item,index) of photoList" :key="item.fileName" class="photo-item" :class="[item.ExifImageWidth>item.ExifImageHeight?'horizontal':'vertical',item.isBig?'big':'']" @click.capture="lookBigPhoto($event,item)">
+                        <img  :src="getFullImageUrl(item.fileName)" :alt="item.title" loading="lazy" class="img">
                     </li>
                 </ul>
             </main>
             <footer>
                 <p>For original images please contact:<br/>zzd1645@gmail.com<p>
             </footer>
+            <div id="loading" v-if="loadingPhoto">
+                <div class="loader"></div>
+            </div>
             `,
             setup() {
                 let viewer = null;
                 const menuSwitch = ref(false);
-                const mainEl = ref(null);
-                const typeList = TYPE_LIST;
-                const type = ref(0);
-                const photoList = ref([]);
-
-                const typeTitle = computed(() => {
-                    return typeList.find(item => item.value === type.value).label
-                })
-
-                watch(type, (v) => {
-                    document.getElementById("app").scrollTo({
-                        top: 0
-                    })
-                    photoList.value = PHOTO_LIST.filter(item => type.value === 0 ? true : type.value === item.type).sort((a, b) => new Date(b.CreateDate) - new Date(a.CreateDate));
-                    if (viewer) {
-                        viewer.update();
-                    }
-                }, {
-                    immediate: true
-                });
-
-                function switchMenu() {
-                    menuSwitch.value = !menuSwitch.value;
-                }
-
-                function menuItemClick(typeVal) {
-                    switchMenu();
-                    type.value = typeVal;
-                }
+                const photoEl = ref();
+                const loadingPhoto = ref(false);
+                const photoList = ref(PHOTO_LIST.map(item => {
+                    let isBig = Math.random() > 0.8 && item.ExifImageWidth > item.ExifImageHeight
+                    return { isBig, ...item };
+                }).sort(item => Math.random() > 0.5 ? 1 : -1));
+                const selectPhoto = ref(null);
 
                 function getFullImageUrl(fileName) {
                     return PHOTO_BASE_URL + "thumbnail/" + fileName
@@ -107,32 +67,66 @@
                     return res & 1 > 0 ? res.toFixed(1) : res
                 }
 
-                function lookBigPhoto(event) {
-                    if (viewer) {
-                        viewer.destroy();
-                        viewer = null;
+                async function lookBigPhoto(event, item) {
+                    if (loadingPhoto.value) {
+                        return
                     }
-                    viewer = new Viewer(event.currentTarget , {
-                        navbar: false,
-                        slideOnTouch: false,
-                        toolbar: false,
-                        keyboard: false,
-                        title: [1, () => {
-                            return "For original images please contact: zzd1645@gmail.com"
-                        }]
-                    });
-                    viewer.show();
+                    loadingPhoto.value = true;
+                    const photoUrl = getFullImageUrl(item.fileName);
+                    try {
+                        //加载 图片和logo
+                        const nikonLogo = await loadImage("/assets/nikon.svg");
+                        const photo = await loadImage(photoUrl);
+                        const canvas = photoEl.value;
+                        const details = `${compute35mmFocalLength(item.FocalLength)}mm f${item.FNumber} ${computeExposureTime(item.ExposureTime)}s iso${item.ISO}`;
+                        const ctx = photoEl.value.getContext("2d");
+                        const canvasBorderWidth = 30; //边框宽
+                        const canvasPhotoGap = 15; //边框和文字的距离
+                        const nikonLogoWidth = 80; //nikon标志宽
+                        const fontSize = 20; //字大小
+                        const canvasWidth = item.ExifImageWidth + canvasBorderWidth * 2;
+                        const canvasHeight = item.ExifImageHeight + canvasBorderWidth * 2 + nikonLogoWidth + canvasPhotoGap;
+                        canvas.width = canvasWidth;
+                        canvas.height = canvasHeight;
+                        ctx.fillStyle = "white";
+                        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+                        ctx.drawImage(photo, canvasBorderWidth, canvasBorderWidth, item.ExifImageWidth, item.ExifImageHeight);
+                        ctx.drawImage(nikonLogo, canvasBorderWidth, item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap, nikonLogoWidth, nikonLogoWidth);
+                        ctx.font = `${fontSize}px Comic Sans MS`;
+                        ctx.fillStyle = "black";
+                        const detailsWidth = ctx.measureText(details).width;
+                        ctx.fillText(item.Model, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5); //相机型号
+                        ctx.fillText(details, (item.ExifImageWidth + canvasBorderWidth - detailsWidth), item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5); //光圈快门ios
+                        ctx.fillText(item.LensModel, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, item.ExifImageHeight + nikonLogoWidth + canvasPhotoGap + canvasBorderWidth - fontSize * 0.5); // 镜头型号
+                        const exportUrl = canvas.toDataURL('image/png');
+                        const exportPhoto = await loadImage(exportUrl);
+                        if (viewer) {
+                            viewer.destroy();
+                            viewer = null;
+                        }
+                        viewer = new Viewer(exportPhoto, {
+                            navbar: false,
+                            slideOnTouch: false,
+                            toolbar: false,
+                            keyboard: false,
+                            title: [1, () => {
+                                return "For original images please contact: zzd1645@gmail.com"
+                            }]
+                        });
+                        viewer.show();
+                        loadingPhoto.value = false;
+                    } catch (e) {
+                        console.error(e)
+                        loadingPhoto.value = false;
+                    }
                 }
 
                 return {
                     menuSwitch,
-                    mainEl,
-                    typeList,
-                    type,
-                    typeTitle,
                     photoList,
-                    switchMenu,
-                    menuItemClick,
+                    selectPhoto,
+                    photoEl,
+                    loadingPhoto,
                     compute35mmFocalLength,
                     computeExposureTime,
                     getFullImageUrl,

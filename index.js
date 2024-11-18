@@ -3,19 +3,19 @@ const Exif = require("exif");
 const { exec } = require('child_process')
 
 // 指定文件夹路径
-const folderPath = './1';
+const folderPath = './assets/photos/thumbnail';
 
 // 读取文件夹下的所有文件名
 fs.readdir(folderPath, async (err, fileNames) => {
+    console.log(fileNames)
     if (err) {
         console.error(err);
         return;
     }
     let arr = [];
     for (let fileName of fileNames) {
-
-        const { image: { Make, Model }, exif: { ExposureTime, FNumber, ISO, FocalLength, CreateDate, LensModel } } = await readImg(folderPath + "/" + fileName);
-
+        const imgInfo = await readImg(folderPath + "/" + fileName);
+        const { image: { Make, Model }, exif: { ExposureTime, FNumber, ISO, FocalLength, CreateDate, LensModel, ExifImageWidth, ExifImageHeight } } = imgInfo;
         const data = {
             fileName,
             Make,
@@ -26,7 +26,8 @@ fs.readdir(folderPath, async (err, fileNames) => {
             ISO,
             LensModel,
             CreateDate: formatCareteDate(CreateDate),
-            type: 0
+            ExifImageWidth,
+            ExifImageHeight
         }
         arr.push(data)
     }
