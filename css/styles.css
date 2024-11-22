@@ -60,7 +60,7 @@ header {
     color: var(--white-color);
 }
 
-#tool {
+.tool {
     margin-left: 0;
     width: 24px;
     height: 24px;

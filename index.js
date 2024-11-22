@@ -7,7 +7,6 @@ const folderPath = './assets/photos';
 
 // 读取文件夹下的所有文件名
 fs.readdir(folderPath, async (err, fileNames) => {
-    console.log(fileNames)
     if (err) {
         console.error(err);
         return;
@@ -16,7 +15,6 @@ fs.readdir(folderPath, async (err, fileNames) => {
     for (let fileName of fileNames) {
         const imgInfo = await readImg(folderPath + "/" + fileName);
         const { image: { Make, Model }, exif: { ExposureTime, FNumber, ISO, FocalLength, FocalLengthIn35mmFormat, CreateDate, LensModel } } = imgInfo;
-        console.log(imgInfo);
         const data = {
             fileName,
             Make,
