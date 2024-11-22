@@ -9,102 +9,150 @@
     <title>Zhang Zhengdao's Photography Album</title>
     <script src="./js/vue.global.js"></script>
     <script src="./js/viewer.min.js"></script>
+    <script src="./js/exif.js"></script>
     <link rel="stylesheet" href="./css/viewer.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-
 </head>
 
 <body>
     <div id="app"></div>
     <script type="module">
-        import { loadImage } from './js/utils.js';
-        const { createApp, ref, computed, watch } = Vue;
+        import { loadImage, getImageInfo } from './js/utils.js'
+        const { createApp, ref, computed, watch } = Vue
         import { PHOTO_BASE_URL, PHOTO_LIST } from './js/constants.js'
         const app = createApp({
             template: `
             <header>
                 <img src="./assets/logo.png" alt="magee avatar" id="logo">
                 <h1 id="website-title">zzd's Photography Album</h1>
+                <img src="./assets/tool.png" alt="tool" id="tool" @click="showToolContainer">
             </header>
             <main>
-                <canvas id="canvas" ref="photoEl"></canvas>
                 <ul id="photo-list" >
                     <li v-for="(item,index) of photoList" :key="item.fileName" class="photo-item" :class="[item.ExifImageWidth>item.ExifImageHeight?'horizontal':'vertical',item.isBig?'big':'']" @click.capture="lookBigPhoto($event,item)">
                         <img  :src="getFullImageUrl(item.fileName)" :alt="item.title" loading="lazy" class="img">
                     </li>
                 </ul>
+                <canvas id="canvas" ref="photoEl"></canvas>
             </main>
             <footer>
                 <p>For original images please contact:<br/>zzd1645@gmail.com<p>
             </footer>
+            <div id="tool-container" v-if="toolContainerShow">
+                <button class="select-btn">photo beautify <input type="file" multiple type="image/png, image/jpeg"  @change="selectImgChange"></button>
+                <ul class="photo-list" >
+                    <li class="photo-item" v-for="(item,index) of prettyPhotoList" :key="index">
+                        <span>{{item.name}}</span>
+                        <a :href="item.downloadUrl" download>download</a>
+                    </li>
+                </ul>
+            </div>
             <div id="loading" v-if="loadingPhoto">
                 <div class="loader"></div>
             </div>
             `,
             setup() {
-                let viewer = null;
-                const menuSwitch = ref(false);
-                const photoEl = ref();
-                const loadingPhoto = ref(false);
+                let viewer = null
+                const photoEl = ref()
+                const loadingPhoto = ref(false)
                 const photoList = ref(PHOTO_LIST.map(item => {
                     let isBig = Math.random() > 0.8 && item.ExifImageWidth > item.ExifImageHeight
-                    return { isBig, ...item };
-                }).sort(item => Math.random() > 0.5 ? 1 : -1));
-                const selectPhoto = ref(null);
+                    return { isBig, ...item }
+                }).sort(item => Math.random() > 0.5 ? 1 : -1))
 
+                const toolContainerShow = ref(false)
+                const prettyPhotoList = ref([])
                 function getFullImageUrl(fileName) {
-                    return PHOTO_BASE_URL + "thumbnail/" + fileName
+                    return PHOTO_BASE_URL + fileName
+                }
+                function showToolContainer() {
+                    toolContainerShow.value = true
+                }
+                function hideToolContainer() {
+                    toolContainerShow.value = false
                 }
 
+                function base64PhotoToBlobUrl(base64String, MIME) {
+                    const base64Data = base64String.replace(/^data:image\/\w+;base64,/, "")
+                    const byteArray = Uint8Array.from(atob(base64Data), char => char.charCodeAt(0))
+                    // 创建一个Blob对象
+                    const blob = new Blob([byteArray], { type: MIME ?? 'image/png' }) // 根据你的实际数据类型修改'image/png'
+
+                    // 创建一个指向Blob对象的URL
+                    return URL.createObjectURL(blob)
+                }
+
+                async function createPrettyPhoto(photoUrl, metaData) {
+                    console.log(metaData)
+                    //加载 图片和logo
+                    const nikonLogo = await loadImage("/assets/nikon.svg")
+                    const photo = await loadImage(photoUrl)
+
+                    const details = `${metaData.FocalLengthIn35mmFormat ?? metaData.FocalLengthIn35mmFilm ?? "unknow"}mm f${metaData.FNumber ?? Number(metaData.FNumber) ?? "unknow"} ${computeExposureTime(metaData.ExposureTime ?? Number(metaData.ExposureTime) ?? 0)}s iso${metaData.ISO ?? metaData.ISOSpeedRatings}` //拍摄参数
+                    const model = metaData.Model ?? "" //相机型号
+                    const lensModel = metaData.LensModel ?? "" //镜头型号
+                    const { width: photoWidth, height: photoHeight } = photo //图片宽高
+
+                    const ctx = photoEl.value.getContext("2d")
+                    const canvasBorderWidth = 30 //边框宽
+                    const canvasPhotoGap = 15 //边框和文字的距离
+                    const nikonLogoWidth = 80 //nikon标志宽
+                    const fontSize = 20 //字大小
+
+                    // canvas 绘制
+                    const canvas = photoEl.value
+                    const canvasWidth = photoWidth + canvasBorderWidth * 2
+                    const canvasHeight = photoHeight + canvasBorderWidth * 2 + nikonLogoWidth + canvasPhotoGap
+                    canvas.width = canvasWidth
+                    canvas.height = canvasHeight
+                    ctx.fillStyle = "white"
+                    ctx.fillRect(0, 0, canvasWidth, canvasHeight)
+                    ctx.drawImage(photo, canvasBorderWidth, canvasBorderWidth, photoWidth, photoHeight)
+                    ctx.drawImage(nikonLogo, canvasBorderWidth, photoHeight + canvasBorderWidth + canvasPhotoGap, nikonLogoWidth, nikonLogoWidth)
+                    ctx.font = `${fontSize}px Comic Sans MS`
+                    ctx.fillStyle = "black"
+                    const detailsWidth = ctx.measureText(details).width
+                    ctx.fillText(model, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, photoHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5) //相机型号
+                    ctx.fillText(details, (photoWidth + canvasBorderWidth - detailsWidth), photoHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5) //光圈快门ios
+                    ctx.fillText(lensModel, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, photoHeight + nikonLogoWidth + canvasPhotoGap + canvasBorderWidth - fontSize * 0.5) // 镜头型号
+                    const exportUrl = canvas.toDataURL('image/png')
+                    const exportPhoto = await loadImage(exportUrl)
+                    return exportPhoto
+                }
+                async function selectImgChange(e) {
+                    let files = e.target.files
+                    let photoFileList = []
+                    loadingPhoto.value = true
+                    for (let item of Array.from(files)) {
+                        console.log(item)
+                        const photoUrl = URL.createObjectURL(item)
+                        const { metaData } = await getImageInfo(URL.createObjectURL(item))
+                        const img = await createPrettyPhoto(photoUrl, metaData)
+                        photoFileList.push({ name: item.name, downloadUrl: base64PhotoToBlobUrl(img.src, item.type) })
+                    }
+                    loadingPhoto.value = false
+                    prettyPhotoList.value = photoFileList
+                }
                 function computeExposureTime(exposureTime) {
                     if (exposureTime >= 1) {
                         return exposureTime
                     }
                     return '1/' + (parseFloat(1 / exposureTime) % 1 > 0 ? parseFloat((1 / exposureTime).toFixed(1)) : parseFloat(1 / exposureTime))
                 }
-                function compute35mmFocalLength(focalLength) {
-                    let res = focalLength * 1.5;
-                    return res & 1 > 0 ? res.toFixed(1) : res
-                }
-
                 async function lookBigPhoto(event, item) {
                     if (loadingPhoto.value) {
                         return
                     }
-                    loadingPhoto.value = true;
-                    const photoUrl = getFullImageUrl(item.fileName);
+                    loadingPhoto.value = true
+                    const photoUrl = getFullImageUrl(item.fileName)
                     try {
-                        //加载 图片和logo
-                        const nikonLogo = await loadImage("/assets/nikon.svg");
-                        const photo = await loadImage(photoUrl);
-                        const canvas = photoEl.value;
-                        const details = `${compute35mmFocalLength(item.FocalLength)}mm f${item.FNumber} ${computeExposureTime(item.ExposureTime)}s iso${item.ISO}`;
-                        const ctx = photoEl.value.getContext("2d");
-                        const canvasBorderWidth = 30; //边框宽
-                        const canvasPhotoGap = 15; //边框和文字的距离
-                        const nikonLogoWidth = 80; //nikon标志宽
-                        const fontSize = 20; //字大小
-                        const canvasWidth = item.ExifImageWidth + canvasBorderWidth * 2;
-                        const canvasHeight = item.ExifImageHeight + canvasBorderWidth * 2 + nikonLogoWidth + canvasPhotoGap;
-                        canvas.width = canvasWidth;
-                        canvas.height = canvasHeight;
-                        ctx.fillStyle = "white";
-                        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-                        ctx.drawImage(photo, canvasBorderWidth, canvasBorderWidth, item.ExifImageWidth, item.ExifImageHeight);
-                        ctx.drawImage(nikonLogo, canvasBorderWidth, item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap, nikonLogoWidth, nikonLogoWidth);
-                        ctx.font = `${fontSize}px Comic Sans MS`;
-                        ctx.fillStyle = "black";
-                        const detailsWidth = ctx.measureText(details).width;
-                        ctx.fillText(item.Model, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5); //相机型号
-                        ctx.fillText(details, (item.ExifImageWidth + canvasBorderWidth - detailsWidth), item.ExifImageHeight + canvasBorderWidth + canvasPhotoGap + fontSize * 1.5); //光圈快门ios
-                        ctx.fillText(item.LensModel, canvasBorderWidth + nikonLogoWidth + canvasPhotoGap, item.ExifImageHeight + nikonLogoWidth + canvasPhotoGap + canvasBorderWidth - fontSize * 0.5); // 镜头型号
-                        const exportUrl = canvas.toDataURL('image/png');
-                        const exportPhoto = await loadImage(exportUrl);
+
+                        const img = await createPrettyPhoto(photoUrl, item)
                         if (viewer) {
-                            viewer.destroy();
-                            viewer = null;
+                            viewer.destroy()
+                            viewer = null
                         }
-                        viewer = new Viewer(exportPhoto, {
+                        viewer = new Viewer(img, {
                             navbar: false,
                             slideOnTouch: false,
                             toolbar: false,
@@ -112,29 +160,30 @@
                             title: [1, () => {
                                 return "For original images please contact: zzd1645@gmail.com"
                             }]
-                        });
-                        viewer.show();
-                        loadingPhoto.value = false;
+                        })
+                        viewer.show()
+                        loadingPhoto.value = false
                     } catch (e) {
                         console.error(e)
-                        loadingPhoto.value = false;
+                        loadingPhoto.value = false
                     }
                 }
 
                 return {
-                    menuSwitch,
                     photoList,
-                    selectPhoto,
                     photoEl,
                     loadingPhoto,
-                    compute35mmFocalLength,
-                    computeExposureTime,
+                    toolContainerShow,
+                    prettyPhotoList,
                     getFullImageUrl,
-                    lookBigPhoto
+                    lookBigPhoto,
+                    showToolContainer,
+                    hideToolContainer,
+                    selectImgChange
                 }
             }
         })
-        app.mount("#app");
+        app.mount("#app")
     </script>
 </body>
 

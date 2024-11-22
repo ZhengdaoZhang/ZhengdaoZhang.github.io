@@ -23,6 +23,7 @@ body {
     font-family: "Comic Sans MS", Times, "Times New Roman", Georgia, serif;
 }
 
+
 #app {
     width: 100vw;
     height: 100vh;
@@ -46,15 +47,93 @@ header {
 #logo {
     flex: 0 0 auto;
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
+
 }
+
 
 #website-title {
     flex: 1 1 auto;
     margin: 0 24px;
     font-size: 20px;
     color: var(--white-color);
+}
+
+#tool {
+    margin-left: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#tool:active {
+    opacity: 0.7;
+}
+
+#tool-container {
+    position: fixed;
+    left: 0;
+    top: 62px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 62px);
+    padding:24px;
+    background-color: var(--primary-color);
+    z-index: 100;
+    overflow: hidden;
+}
+#tool-container  .select-btn{
+    flex: 0 0 auto;
+    position: relative;
+    display: block;
+    appearance: none;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    color: var(--paimary-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color) ;
+    cursor: pointer;
+    
+}
+#tool-container  .select-btn:active{
+    opacity: 0.7;
+}
+#tool-container  .select-btn input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+#tool-container .photo-list{
+
+    flex: 1 1 auto;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+#tool-container .photo-list .photo-item {
+    display: flex;
+    color: var(--white-color);
+    font-size: 14px;
+    line-height: 24px;
+    padding: 3px 0;
+    height: 24px;
+}
+#tool-container .photo-list .photo-item span{
+    flex: 1 1 auto;
+}
+#tool-container .photo-list .photo-item a{
+    flex: 0 0 auto;
+    cursor: pointer;
+    
 }
 
 #photo-show {
@@ -124,7 +203,7 @@ main {
     line-height: 48px;
 }
 
-#photo-list {
+main #photo-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-auto-rows: 240px;
@@ -133,7 +212,7 @@ main {
     overflow: hidden;
 }
 
-.photo-item {
+main .photo-item {
     position: relative;
     display: block;
     width: 100%;
@@ -141,16 +220,16 @@ main {
     overflow: hidden;
 }
 
-.photo-item.big {
+main .photo-item.big {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-.photo-item.vertical {
+main .photo-item.vertical {
     grid-row: span 2;
 }
 
-.photo-item .img {
+main .photo-item .img {
     position: relative;
     display: block;
     width: 100%;
@@ -214,19 +293,19 @@ footer p {
 /* 动画定义 */
 @keyframes spin {
     0% {
-        transform:translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     /* 初始状态 */
     100% {
-        transform:translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 
     /* 结束状态 */
 }
 
 @media screen and (min-width:768px) and (max-width:1247.9px) {
-    #photo-list {
+    main #photo-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-auto-rows: 210px;
@@ -252,7 +331,7 @@ footer p {
         padding: 16px 16px;
     }
 
-    #photo-list {
+    main #photo-list {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         grid-auto-rows: 120px;
